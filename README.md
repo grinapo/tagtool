@@ -7,12 +7,10 @@ There may be commits. Who knows?
 
 # Original ReadMe
 
-                        ==========================
-                              Audio Tag Tool
-                        ==========================
+## Audio Tag Tool
 
 
-## DESCRIPTION
+### DESCRIPTION
 
   Audio Tag Tool is a program to manage the information fields in MP3 and 
 Ogg Vorbis files (commonly called 'tags').  It is available under the GNU 
@@ -45,12 +43,12 @@ one of the main operations Audio Tag Tool can do:
 format thanks to an easily configurable format template. 
 
 
-## RELEASE NOTES
+### RELEASE NOTES
 
   Read the file NEWS for information about the current release.
 
 
-## LIMITATIONS
+### LIMITATIONS
 
   For MP3 files:
 
@@ -68,7 +66,7 @@ format thanks to an easily configurable format template.
   See also the BUGS file for a list of currently know problems.
 
 
-## FILESYSTEM ENCODINGS
+### FILESYSTEM ENCODINGS
 
   The filesystem encoding is assumed to be UTF-8.  As with other Gtk2 
 apps, if your filesystem is not in UTF-8 you will need to set the 
@@ -80,7 +78,7 @@ G_FILENAME_ENCODING environment variable.  From the Gtk documentation:
    character set from the list is taken as the filename encoding."
 
 
-## INSTALLATION
+### INSTALLATION
 
   At the console type
 
@@ -96,7 +94,7 @@ platforms please let me know.  If you don't succeed let me know too,
 and I'll try to fix it...
 
 
-## LICENSE
+### LICENSE
 
   This program is free software; you can redistribute it and/or 
 modify it under the terms of the GNU General Public License, 
@@ -109,8 +107,8 @@ General Public License for more details (it should be included
 in this package in the file COPYING.)
 
 
-## CONTACTS
+### CONTACTS
 
-  Author:   Pedro Ávila Lopes (paol1976<#>yahoo.com)
-  Homepage: http://pwp.netcabo.pt/paol/tagtool/
+* Author:   Pedro Ávila Lopes (paol1976<#>yahoo.com)
+* Homepage: http://pwp.netcabo.pt/paol/tagtool/
 
