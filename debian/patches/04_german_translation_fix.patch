@@ -1,0 +1,14 @@
+Description: Patch to fix German translation
+Author: Graham Wilson <graham@debian.org>
+Last-Update: 2010-06-13
+--- a/po/de.po
++++ b/po/de.po
+@@ -859,7 +859,7 @@
+ "\n"
+ "Beispiel zum Verschieben: \n"
+ "\n"
+-"Das Format des Dateinamens kann Unterordner einschliessen:\n"
++"Das Format des Dateinamens kann Unterordner einschließen:\n"
+ "Wenn vom vorherigen Beispiel ausgehend der zusätzliche Wunsch\n"
+ "besteht, dass die Dateien sich in einem Unterordner mit dem Namen des\n"
+ "Album befinden sollen, könnte folgendes Format verwendet werden:\n"

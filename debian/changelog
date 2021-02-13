@@ -1,0 +1,203 @@
+tagtool (0.12.3-9) unstable; urgency=low
+
+  * QA upload.
+  * debian/patches:
+    - 02_unknown_locale_fix.diff: Remove configure diff.
+    - 05_binutils_gold.patch: Rebase on src/Makefile.am and also
+      link against libm. (Closes: #713479)
+  * debian/rules:
+    - Convert to dh(1) and run with dh-autoreconf.
+    - Build with -Wl,--as-needed.
+  * debian/copyright:
+    - Update field names according to CF 1.0.
+    - Update Source.
+    - Add missing license paragraph for GPL-2+.
+  * debian/control:
+    - Set Maintainer to Debian QA Group (cf. #699949).
+    - Bump Standards-Version to 3.9.4.
+    - Bump debhelper in Build-Depends to 9 for build-{indep,arch} support and
+      compat level 9.
+    - Add dh-autoreconf to Build-Depends.
+    - Replace libxml-parser-perl with intltool in Build-Depends.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 08 Jul 2013 15:34:24 +0200
+
+tagtool (0.12.3-8.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Pass -logg to the linker to fix FTBFS with gold linker (Closes: #556483).
+
+ -- Alessio Treglia <alessio@debian.org>  Fri, 06 May 2011 01:53:31 +0200
+
+tagtool (0.12.3-8) unstable; urgency=low
+
+  * debian/source/format:
+    + Added to use source format 3.0 (quilt)
+  * debian/control:
+    + Updated to Standards-Version 3.8.4
+  * debian/copyright:
+    + Updated to use DEP-5 specification
+  * debian/patches:
+    + Added patch 02_unknown_locale_fix.diff to fix unknown locale code ua
+    + Refreshed all patches for patch header updates
+
+ -- Kartik Mistry <kartik@debian.org>  Sun, 13 Jun 2010 11:17:09 +0530
+
+tagtool (0.12.3-7) unstable; urgency=low
+
+  * Added debian/README.source file
+  * Migrated patch system to quilt from dpatch
+  * debian/control:
+    + Updated to Standards-Version 3.8.3
+    + Wrapped up Build-Depends
+    + Build-Depends on debhelper to >= 7.0.50~
+    + Updated Homepage field URL as older one is not exists
+  * debian/patches/01_spelling_fix.patch:
+    + Added patch fix typo in src/aux_id3lib.c
+  * debian/copyright:
+    + Don't point to symlinked license text for GPL
+  * debian/rules:
+    + Updated for quilt
+  * debian/tagtool.1:
+    + Wrap long line to 80 chars
+    + Updated my email address
+    + Updated Homepage entry
+
+ -- Kartik Mistry <kartik@debian.org>  Sat, 19 Sep 2009 12:06:34 +0530
+
+tagtool (0.12.3-6) unstable; urgency=low
+
+  * debian/control:
+    + Updated to Standards-Version 3.8.1
+    + Updated my maintainer address
+    + Updated debhelper compatibility to 7
+  * debian/copyright:
+    + [Lintian] Updated to use correct copyright symbol
+  * debian/rules:
+    + Used dh_prep instead of obsolete dh_clean -k
+
+ -- Kartik Mistry <kartik@debian.org>  Thu, 19 Mar 2009 11:33:44 +0530
+
+tagtool (0.12.3-5) unstable; urgency=low
+
+  * debian/rules:
+    + [Lintian] Fixed config.guess, config.sub presence in .diff.gz,
+      Thanks to Kumar Appaiah for help
+  * debian/copyright:
+    + Updated Debian package copyright year
+    + Fixed indentation of license text
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Mon, 14 Apr 2008 12:46:30 +0530
+
+tagtool (0.12.3-4) unstable; urgency=low
+
+  * debian/rules:
+    + Added dh_icons to update icon cache, Thanks to Onkar Shinde
+      <onkarshinde@gmail.com> and pointing it out
+    + Added --datadir flag in ./configure to let other language available,
+      Thanks to norsetto@ubuntu.com for patch (Closes: #451645)
+  * debian/control:
+     + Updated Standards-Version to 3.7.3
+     + Updated debhelper build dependency
+     + Updated Homepage field
+  * debian/compat:
+    + Updated to debhelper 5 compatibility
+  * debian/watch:
+    + Fixed to get latest upstream release
+  * debian/copyright:
+    + Updated debian packaging copyright owner
+    + Added missing license of install-sh
+    + Updated link to GPL-2 since, package is GPL-2 only
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Tue, 01 Jan 2008 13:54:41 +0530
+
+tagtool (0.12.3-3) unstable; urgency=low
+
+  * debian/watch: fixed to use QA redirecter
+  * debian/rules: fixed clean target, fixed installation of .xpm file
+  * debian/copyright: moved copyright out of license section, added package
+    copyright note
+  * debian/tagtool.1: fixed according standard man page
+  * debian/menu: fixed according to latest menu policy
+  * debian/control: fixed short description
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Wed, 22 Aug 2007 15:28:35 +0530
+
+tagtool (0.12.3-2) unstable; urgency=low
+
+  * Updated debhelper compability to 5
+  * debian/control: minor cleanups
+  * debian/rules: minor cleanups
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Thu, 26 Apr 2007 12:34:49 +0530
+
+tagtool (0.12.3-1) unstable; urgency=low
+
+  * New upstream release
+    - allow "<track> <title>" by not allowing spaces in track (Closes: #282512)
+    - absolute paths not treated as relative in mass renaming (Closes: #282510)
+  * debian/patches: Removed patches which are merged with upstream now
+  * debian/copyright: minor format cleanups
+  * debian/rules: minor cleanups, added proper clean: rule
+  * debian/control: added ${misc:Depends} to Depends field
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Thu,  8 Mar 2007 12:41:21 +0530
+
+tagtool (0.12.2-2) unstable; urgency=low
+
+  * New maintainer (Closes: #383128)
+  * Add dpatch support for previous transitions
+  * Added patch for correct menu entry (Closes: #336720)
+  * Update standard version to 3.7.2
+  * Update FSF address in debian/copyright
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Tue,  5 Dec 2006 16:16:43 +0530
+
+tagtool (0.12.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - should work with GNOME now (closes: #317695)
+  * Update the autogen.sh script.
+  * Correct an error in de.po. (closes: #313901)
+  * Update standards version. No changes.
+
+ -- Graham Wilson <graham@debian.org>  Fri, 05 Aug 2005 02:25:30 +0000
+
+tagtool (0.12.1-1) unstable; urgency=low
+
+  * New upstream release. Mostly just translation updates.
+
+ -- Graham Wilson <graham@debian.org>  Tue, 08 Mar 2005 16:16:37 +0000
+
+tagtool (0.12-2) unstable; urgency=low
+
+  * Oops. Build depend on libxml-parser-perl.
+
+ -- Graham Wilson <graham@debian.org>  Thu, 03 Mar 2005 19:00:56 +0000
+
+tagtool (0.12-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove po/*.gmo files on clean.
+
+ -- Graham Wilson <graham@debian.org>  Thu, 03 Mar 2005 15:15:57 +0000
+
+tagtool (0.11.1-1) unstable; urgency=low
+
+  * Add a watch file for uscan.
+  * New upstream release.
+  * Just call autoreconf in autogen.sh.
+
+ -- Graham Wilson <graham@debian.org>  Sun, 21 Nov 2004 23:06:12 +0000
+
+tagtool (0.11-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Graham Wilson <graham@debian.org>  Wed, 27 Oct 2004 04:04:15 +0000
+
+tagtool (0.10-1) unstable; urgency=low
+
+  * Initial release. (closes: #277193)
+
+ -- Graham Wilson <graham@debian.org>  Wed, 20 Oct 2004 03:28:05 +0000

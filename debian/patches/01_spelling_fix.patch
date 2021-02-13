@@ -1,0 +1,14 @@
+Description: Patch to fix spelling mistake in src/aux_id3lib.c
+Author: Kartik Mistry <kartik@debian.org>
+Last-Update: 2010-06-13
+--- a/src/aux_id3lib.c
++++ b/src/aux_id3lib.c
+@@ -677,7 +677,7 @@
+   {ID3FID_TERMSOFUSE,        ""   , "USER", false, false, ID3FD_TermsOfUse,    "Terms of use"},
+   {ID3FID_UNSYNCEDLYRICS,    "ULT", "USLT", false, false, ID3FD_GeneralText,   "Unsynchronized lyric/text transcription"},
+   {ID3FID_WWWCOMMERCIALINFO, "WCM", "WCOM", false, false, ID3FD_URL,           "Commercial information"},
+-  {ID3FID_WWWCOPYRIGHT,      "WCP", "WCOP", false, false, ID3FD_URL,           "Copyright/Legal infromation"},
++  {ID3FID_WWWCOPYRIGHT,      "WCP", "WCOP", false, false, ID3FD_URL,           "Copyright/Legal information"},
+   {ID3FID_WWWAUDIOFILE,      "WAF", "WOAF", false, false, ID3FD_URL,           "Official audio file webpage"},
+   {ID3FID_WWWARTIST,         "WAR", "WOAR", false, false, ID3FD_URL,           "Official artist/performer webpage"},
+   {ID3FID_WWWAUDIOSOURCE,    "WAS", "WOAS", false, false, ID3FD_URL,           "Official audio source webpage"},
